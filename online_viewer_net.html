@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monk Games</title>
+  <style>
+    .page {
+        position: relative; 
+        padding: 20px; 
+        width: 92%; 
+        max-width: 1100px; 
+        margin: 20px auto; 
+        background: rgba(20,15,10,0.85); 
+        border: 2px solid #5c4425; 
+        border-radius: 12px; 
+        min-height: 800px;
+    }
+
+
+    .content-wrapper {
+        padding: 10px 10px;
+        background: #2a1e12; 
+        border: 3px solid #5c4425; 
+        border-radius: 6px; 
+        margin-bottom: 20px;
+    }
+
+    .privacy-dropdown {
+        background: #3d2a18;
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        margin-bottom: 10px;
+        color: #f0d9a3;
+        overflow: hidden; 
+    }
+    .privacy-dropdown summary {
+        padding: 15px 20px;
+        font-weight: bold;
+        font-size: 1.1em;
+        cursor: pointer;
+        outline: none;
+        list-style: none; 
+        display: block; 
+        position: relative;
+    }
+    .privacy-dropdown summary::after {
+        content: '▼';
+        position: absolute;
+        right: 20px;
+        transition: transform 0.2s;
+    }
+    .privacy-dropdown[open] summary::after {
+        content: '▲';
+    }
+    .privacy-content {
+        padding: 10px 20px 20px 20px;
+        border-top: 1px solid var(--muted);
+        background: #2a1e12; 
+    }
+    .privacy-content h3 {
+        color: var(--gold);
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+    .privacy-content ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        padding-left: 0;
+    }
+    .privacy-content ul li {
+        margin-bottom: 5px;
+    }
+    .privacy-content p {
+        margin-bottom: 10px;
+    }
+    .privacy-content a {
+        color: var(--gold);
+        text-decoration: underline;
+    }
+    :root {
+      --bg: #4b3621;
+      --header: #2a1e12;
+      --gold: #ffda7b;
+      --accent: #c28f4a;
+      --panel: #1b140d;
+      --muted: #845e2f;
+      --page-bg: rgba(20,15,10,0.85);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: Arial, Helvetica, sans-serif; 
+      background: var(--bg); 
+      color: #f0d9a3;
+      min-height: 100vh;
+    }
+    header {
+      background: var(--header);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #e6c37a;
+    }
+    #tabBar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      background: #1b140d;
+      border-bottom: 3px solid var(--muted);
+      padding: 10px;
+    }
+    .tabBtn {
+      padding: 8px 16px;
+      background: linear-gradient(#3d2a18, #2a1e12);
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      color: var(--gold);
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.12s;
+    }
+    .tabBtn.active {
+      background: var(--gold);
+      color: #000;
+      border-color: var(--muted);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    .tabBtn:hover {
+      transform: translateY(-2px);
+    }
+    .page {
+      display: none;
+    }
+    .page.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Monk Games</h1>
+  </header>
+  <div id="tabBar">
+    <button class="tabBtn active" onclick="switchPage('page-1')">Home</button>
+      <button class="tabBtn" onclick="switchPage('3613ca0b-cd7c-4ffc-bfcb-8e9bbead42d1')">Rules</button>
+      <button class="tabBtn" onclick="switchPage('e444741f-3dd5-4fe7-a06f-164d1ccb0a82')">Games We Made</button>
+      <button class="tabBtn" onclick="switchPage('1515105f-689d-4b1d-9141-0d0c11536d7a')">Privacy Policy</button>
+      <button class="tabBtn" onclick="switchPage('be85f790-eec1-4d8b-998d-6f7134d1ef00')">Contact/Support</button>
+  </div>
+  <div class="page active" id="page-1" style="display: block; padding: 20px; width: 92%; max-width: 1100px; margin: 20px auto; background: rgba(20,15,10,0.85); border: 2px solid #5c4425; border-radius: 12px; position: relative; min-height: 800px;">
+      <div style="position: absolute; left: 36px; top: 26px; width: 517px; height: 259px; transform: scale(1) rotate(0deg); z-index: 1; border: 3px solid #5c4425; border-radius: 6px; ;; background: #2a1e12; border: 3px solid #5c4425; border-radius: 6px; padding: 18px; color: #ffda7b;">At our Team Monk Games we care about your private information. </div>
+      <div style="position: absolute; left: 52px; top: 178px; width: 473px; height: 181px; transform: scale(1) rotate(0deg); z-index: 2; ; ; ;; font-size: 18px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Thats why we created this website to explain and make you feel save when playing our game. And of course to show you our interactive games.</div>
+      <img src="https://image2url.com/files/1765659751149-e79b0ffb-7291-4831-b37e-c7ebacda7ffe.webp" alt="" style="position: absolute; left: 800px; top: 14px; width: 260px; height: 270px; transform: scale(1) rotate(0deg); z-index: 4; border: 3px solid #c28f4a; border-radius: 10px; ;; object-fit: contain; border: 3px solid #c28f4a; border-radius: 10px;" />
+      <img src="https://image2url.com/gifs/1765271592011-f44736c7-5575-42a0-bd57-6d6029af0e9f.gif" alt="Mining Monks VR Gif" style="position: absolute; left: 797px; top: 302px; width: 263px; height: 273px; transform: scale(1) rotate(0deg); z-index: 5; border: 3px solid #c28f4a; border-radius: 10px; ;; object-fit: contain; border: 3px solid #c28f4a; border-radius: 10px;" />
+      <a href="https://www.meta.com/nl-nl/experiences/mining-monks-vr/9142785535738829/" target="_blank" style="position: absolute; left: 917px; top: 591px; width: 140px; height: 44px; transform: scale(1) rotate(0deg); z-index: 6; border: 3px solid #c28f4a; border-radius: 8px; ;; display: flex; align-items: center; justify-content: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; text-decoration: none;">Play On VR</a>
+      <a href="https://discord.gg/7dqn9fygtz" target="_blank" style="position: absolute; left: 760px; top: 591px; width: 140px; height: 44px; transform: scale(1) rotate(0deg); z-index: 7; border: 2px solid #c28f4a; border-radius: 8px; ;; display: flex; align-items: center; justify-content: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; text-decoration: none;">Join Discord</a>
+      <a href="mailto:MiningMonksVR@gmail.com?subject=Question&body=Type%20here%20what%20you%20have%20a%20question%20or%20problem%20about%0A%0AIn-game%20name:%20(if%20needed)%20%0APlayFab%20ID:%20(if%20needed)%20" target="_blank" style="position: absolute; left: 834px; top: 643px; width: 140px; height: 44px; transform: scale(1) rotate(0deg); z-index: 8; border: 2px solid #c28f4a; border-radius: 8px; ;; display: flex; align-items: center; justify-content: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; text-decoration: none;">Ask Qeustions</a>
+    </div>
+    <div class="page" id="3613ca0b-cd7c-4ffc-bfcb-8e9bbead42d1" style="display: none; padding: 20px; width: 92%; max-width: 1100px; margin: 20px auto; background: rgba(20,15,10,0.85); border: 2px solid #5c4425; border-radius: 12px; position: relative; min-height: 800px;">
+      <img src="https://files.cdn-files-a.com/uploads/11310682/2000_68f611cfac1d7.png" alt="" style="position: absolute; left: 743px; top: 15px; width: 312px; height: 444px; transform: scale(1) rotate(0deg); z-index: 1; border: 3px solid #c28f4a; border-radius: 10px; ;; object-fit: contain; border: 3px solid #c28f4a; border-radius: 10px;" />
+      <div style="position: absolute; left: 19px; top: 25px; width: 658px; height: 728px; transform: scale(1) rotate(0deg); z-index: 2; border: 3px solid #5c4425; border-radius: 6px; ;; background: #2a1e12; border: 3px solid #5c4425; border-radius: 6px; padding: 18px; color: #ffda7b;"></div>
+      <a href="https://discord.gg/7dqn9fygtz" target="_blank" style="position: absolute; left: 901px; top: 480px; width: 140px; height: 44px; transform: scale(1) rotate(0deg); z-index: 3; border: 2px solid #c28f4a; border-radius: 8px; ;; display: flex; align-items: center; justify-content: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; text-decoration: none;">Join DIscord</a>
+      <a href="https://www.meta.com/nl-nl/experiences/mining-monks-vr/9142785535738829/" target="_blank" style="position: absolute; left: 738px; top: 480px; width: 140px; height: 44px; transform: scale(1) rotate(0deg); z-index: 4; border: 2px solid #c28f4a; border-radius: 8px; ;; display: flex; align-items: center; justify-content: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; text-decoration: none;">Play on VR</a>
+      <div style="position: absolute; left: 28px; top: 32px; width: 866px; height: 82px; transform: scale(1) rotate(0deg); z-index: 6; ; ; ;; font-size: 40px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Rules last updated: 02-12-2025</div>
+      <div style="position: absolute; left: 30px; top: 97px; width: 326px; height: 40px; transform: scale(1) rotate(0deg); z-index: 7; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">𝐑𝐮𝐥𝐞 1 — 𝐑𝐞𝐬𝐩𝐞𝐜𝐭 𝐎𝐭𝐡𝐞𝐫𝐬</div>
+      <div style="position: absolute; left: 30px; top: 128px; width: 637px; height: 52px; transform: scale(1) rotate(0deg); z-index: 8; ; ; ;; font-size: 15px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Treat all players with kindness and respect. Rude, offensive, or disrespectful behavior will not be tolerated.</div>
+      <div style="position: absolute; left: 30px; top: 181px; width: 326px; height: 40px; transform: scale(1) rotate(0deg); z-index: 10; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">𝐑𝐮𝐥𝐞 2 — 𝐙𝐞𝐫𝐨 𝐓𝐨𝐥𝐞𝐫𝐚𝐧𝐜𝐞 𝐟𝐨𝐫 𝐑𝐚𝐜𝐢𝐬𝐦</div>
+      <div style="position: absolute; left: 29px; top: 203px; width: 637px; height: 52px; transform: scale(1) rotate(0deg); z-index: 11; ; ; ;; font-size: 15px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Racism of any kind is strictly prohibited. Every player should feel welcome, included, and safe.</div>
+      <div style="position: absolute; left: 30px; top: 241px; width: 326px; height: 40px; transform: scale(1) rotate(0deg); z-index: 12; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">𝐑𝐮𝐥𝐞 3 — 𝐍𝐨 𝐁𝐮𝐥𝐥𝐲𝐢𝐧𝐠</div>
+      <div style="position: absolute; left: 29px; top: 263px; width: 637px; height: 52px; transform: scale(1) rotate(0deg); z-index: 13; ; ; ;; font-size: 15px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Bullying, intimidation, or making another player feel uncomfortable or unsafe is not allowed under any circumstances.</div>
+      <div style="position: absolute; left: 30px; top: 320px; width: 326px; height: 40px; transform: scale(1) rotate(0deg); z-index: 14; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">𝐑𝐮𝐥𝐞 4 — 𝐍𝐨 𝐃𝐨𝐱𝐱𝐢𝐧𝐠</div>
+      <div style="position: absolute; left: 30px; top: 343px; width: 637px; height: 101px; transform: scale(1) rotate(0deg); z-index: 15; ; ; ;; font-size: 15px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Sharing or attempting to share someone’s personal information (doxxing) is strictly banned. This applies everywhere: inside the server, outside the server in DMs, or in any other community. Violations will result in an immediate ban.</div>
+      <div style="position: absolute; left: 30px; top: 415px; width: 438px; height: 40px; transform: scale(1) rotate(0deg); z-index: 16; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">𝐑𝐮𝐥𝐞 5 — 𝐍𝐨 𝐇𝐚𝐫𝐚𝐬𝐬𝐦𝐞𝐧𝐭</div>
+      <div style="position: absolute; left: 30px; top: 439px; width: 637px; height: 101px; transform: scale(1) rotate(0deg); z-index: 17; ; ; ;; font-size: 15px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Harassing any STAFF member or player is strictly prohibited and will lead to disciplinary action.</div>
+      <div style="position: absolute; left: 30px; top: 470px; width: 438px; height: 42px; transform: scale(1) rotate(0deg); z-index: 18; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">𝐑𝐮𝐥𝐞 6 — 𝐍𝐨 𝐇𝐚𝐜𝐤𝐢𝐧𝐠 𝐨𝐫 𝐄𝐱𝐩𝐥𝐨𝐢𝐭𝐢𝐧𝐠</div>
+      <div style="position: absolute; left: 30px; top: 490px; width: 637px; height: 101px; transform: scale(1) rotate(0deg); z-index: 19; ; ; ;; font-size: 15px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Hacking, exploiting, or attempting to damage the game or its systems is forbidden. This includes unauthorized access, account scamming, or any form of cheating.</div>
+      <div style="position: absolute; left: 30px; top: 545px; width: 438px; height: 42px; transform: scale(1) rotate(0deg); z-index: 20; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">𝐑𝐮𝐥𝐞 7 — 𝐌𝐨𝐝𝐝𝐢𝐧𝐠</div>
+      <div style="position: absolute; left: 30px; top: 566px; width: 637px; height: 101px; transform: scale(1) rotate(0deg); z-index: 21; ; ; ;; font-size: 15px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Sharing or using modded APKs, DLLs, hacks, or cheats—whether for this game or any other—is not allowed. Violations may result in game bans of up to 4 weeks and can escalate to a permanent ban.</div>
+      <div style="position: absolute; left: 30px; top: 643px; width: 438px; height: 42px; transform: scale(1) rotate(0deg); z-index: 22; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">𝐑𝐮𝐥𝐞 8 — 𝐈𝐧𝐭𝐞𝐥𝐥𝐞𝐜𝐭𝐮𝐚𝐥 𝐏𝐫𝐨𝐩𝐞𝐫𝐭𝐲 & 𝐂𝐫𝐞𝐝𝐢𝐭</div>
+      <div style="position: absolute; left: 30px; top: 668px; width: 637px; height: 101px; transform: scale(1) rotate(0deg); z-index: 23; ; ; ;; font-size: 15px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">You are not allowed to take ideas, create your own scripts, or make models based on anything from our games without giving proper credit. If you use inspiration from our work, you must clearly state where the idea came from.</div>
+      <img src="https://image2url.com/gifs/1765271592011-f44736c7-5575-42a0-bd57-6d6029af0e9f.gif" alt="" style="position: absolute; left: 835px; top: 534px; width: 234px; height: 245px; transform: scale(1) rotate(0deg); z-index: 24; border: 3px solid #c28f4a; border-radius: 10px; ;; object-fit: contain; border: 3px solid #c28f4a; border-radius: 10px;" />
+      <a href="mailto:MiningMonksVR@gmail.com?subject=Question&body=Type%20here%20what%20you%20have%20a%20question%20or%20problem%20about%0A%0AIn-game%20name:%20(if%20needed)%20%0APlayFab%20ID:%20(if%20needed)%20" target="_blank" style="position: absolute; left: 690px; top: 655px; width: 125px; height: 67px; transform: scale(1) rotate(0deg); z-index: 25; border: 3px solid #c28f4a; border-radius: 14px; ;; display: flex; align-items: center; justify-content: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 700; text-decoration: none;">Have Qeustions click here</a>
+    </div>
+    <div class="page" id="e444741f-3dd5-4fe7-a06f-164d1ccb0a82" style="display: none; padding: 20px; width: 92%; max-width: 1100px; margin: 20px auto; background: rgba(20,15,10,0.85); border: 2px solid #5c4425; border-radius: 12px; position: relative; min-height: 800px;">
+      <div style="position: absolute; left: 401px; top: 0px; width: 652px; height: 141px; transform: scale(1) rotate(0deg); z-index: 1; ; ; ;; font-size: 45px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Games we Made</div>
+      <div style="position: absolute; left: 486px; top: 135px; width: 200px; height: 40px; transform: scale(1) rotate(0deg); z-index: 2; ; ; ;; font-size: 25px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Mining Monks VR</div>
+      <img src="https://files.cdn-files-a.com/uploads/11310682/400_68f60e0433943.png" alt="" style="position: absolute; left: 496px; top: 171px; width: 151px; height: 150px; transform: scale(1) rotate(0deg); z-index: 3; border: 3px solid #c28f4a; border-radius: 10px; ;; object-fit: contain; border: 3px solid #c28f4a; border-radius: 10px;" />
+      <div style="position: absolute; left: 465px; top: 322px; width: 243px; height: 53px; transform: scale(1) rotate(0deg); z-index: 4; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">A vr interactive mining game</div>
+      <a href="https://www.meta.com/nl-nl/experiences/mining-monks-vr/9142785535738829/" target="_blank" style="position: absolute; left: 409px; top: 349px; width: 140px; height: 44px; transform: scale(1) rotate(0deg); z-index: 5; border: 2px solid #c28f4a; border-radius: 8px; ;; display: flex; align-items: center; justify-content: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; text-decoration: none;">Play on Vr</a>
+      <a href="https://discord.gg/7dqn9fygtz" target="_blank" style="position: absolute; left: 563px; top: 349px; width: 140px; height: 44px; transform: scale(1) rotate(0deg); z-index: 6; border: 2px solid #c28f4a; border-radius: 8px; ;; display: flex; align-items: center; justify-content: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; text-decoration: none;">Join Discord</a>
+    </div>
+    <div class="page" id="1515105f-689d-4b1d-9141-0d0c11536d7a" style="display: none;">
+        
+        <div class="content-wrapper" style="float: right; width: 280px; margin-top: 55px; padding: 10px; height: auto;">
+            <div style="font-size: 19px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; margin-bottom: 10px;">If you have any questions or concerns about this Privacy Policy, you can contact us at</div>
+            <a href="mailto:MiningMonksVR@gmail.com?subject=Question&body=Type%20here%20what%20you%20have%20a%20question%20or%20problem%20about%0A%0AIn-game%20name:%20(if%20needed)%20%0APlayFab%20ID:%20(if%20needed)%20" target="_blank" style="display: block; text-align: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; text-decoration: none; padding: 10px 0;">📧 miningmonksvr@gmail.com</a>
+        </div>
+        
+        <img src="https://files.cdn-files-a.com/uploads/11310682/2000_68f611cfac1d7.png" alt="" style="float: right; width: 280px; height: auto; border: 3px solid #c28f4a; border-radius: 10px; object-fit: contain; margin-left: 20px; margin-top: 20px;" />
+
+        <div class="content-wrapper" style="overflow: hidden; padding: 18px; color: #ffda7b; margin-right: 320px;">
+            
+            <div style="font-size: 38px; margin-bottom: 20px; color: #f0d9a3;">Privacy Policy last updated: 10-12-2025</div>
+            
+            <details class="privacy-dropdown">
+                <summary>1. Information We Collect</summary>
+                <div class="privacy-content">
+                    <p>Monk Devs collects information to provide and improve your game experience, which includes:</p>
+                    
+                    <h3>a. Gameplay Data</h3>
+                    <ul>
+                        <li>Your player name or nickname</li>
+                        <li>Game scores, achievements, or progress</li>
+                        <li>Multiplayer session information (such as room name, time joined, and player count)</li>
+                    </ul>
+                    <p>This information is used to provide online multiplayer functionality and improve your overall experience.</p>
+                    
+                    <h3>b. Network and Device Data</h3>
+                    <p>When you play online, we may collect limited technical information automatically, such as:</p>
+                    <ul>
+                        <li>Your IP address and region (approximate, not exact location)</li>
+                        <li>Device type (e.g., Meta Quest 2, Quest 3, or PCVR)</li>
+                        <li>Network latency (ping) for multiplayer connection stability</li>
+                    </ul>
+
+                    <h3>c. Third-Party Services</h3>
+                    <p>Monk Devs may use third-party services to enable certain features:</p>
+                    <ul>
+                        <li>**Photon Unity Networking (PUN/Photon Fusion)** – for multiplayer and voice chat</li>
+                        <li>**PlayFab (optional)** – for leaderboards, statistics, and player data</li>
+                    </ul>
+                    <p>These services may process user identifiers and gameplay data on our behalf. Their privacy policies are available here: <a href="https://www.microsoft.com/en-us/privacystatement/default.aspx" target="_blank">Microsoft Privacy Policy (PlayFab)</a></p>
+
+                    <h3>d. Meta Horizon Data</h3>
+                    <p>Our app receives limited user data from Meta Horizon to enable platform features. This may include:</p>
+                    <ul>
+                        <li>User ID – a unique identifier linked to your Meta Horizon account</li>
+                        <li>User profile information – such as your display name or avatar</li>
+                    </ul>
+                    <p>This data is used only to support gameplay, personalize your experience, and enable features like multiplayer and stats. We do not sell or share this data for advertising or marketing.</p>
+                </div>
+            </details>
+
+            <details class="privacy-dropdown">
+                <summary>2. How We Use the Information</summary>
+                <div class="privacy-content">
+                    <p>We use collected data to:</p>
+                    <ul>
+                        <li>Allow multiplayer gameplay and communication between players</li>
+                        <li>Maintain leaderboards and player statistics</li>
+                        <li>Improve performance and stability</li>
+                        <li>Detect and prevent cheating or abuse</li>
+                        <li>Fix bugs and balance the game</li>
+                    </ul>
+                    <p>We never sell, rent, or share your personal information with third parties for advertising or marketing.</p>
+                </div>
+            </details>
+
+            <details class="privacy-dropdown">
+                <summary>3. Data Storage and Retention</summary>
+                <div class="privacy-content">
+                    <p>Gameplay and account data are stored securely through trusted third-party services such as Photon and PlayFab.</p>
+                    <p>We retain data only as long as necessary to operate the game or comply with legal obligations.</p>
+                </div>
+            </details>
+
+            <details class="privacy-dropdown">
+                <summary>4. Your Rights</summary>
+                <div class="privacy-content">
+                    <p>You may:</p>
+                    <ul>
+                        <li>Request to view or delete any stored account data (if applicable)</li>
+                        <li>Disable multiplayer features (by playing offline)</li>
+                        <li>Contact us at any time with privacy-related questions</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="privacy-dropdown">
+                <summary>5. Security</summary>
+                <div class="privacy-content">
+                    <p>We take reasonable steps to protect your data against unauthorized access, alteration, or loss.</p>
+                    <p>However, no system is 100% secure, and online data transmission carries inherent risks.</p>
+                </div>
+            </details>
+            
+            <details class="privacy-dropdown">
+                <summary>6. Changes to This Policy</summary>
+                <div class="privacy-content">
+                    <p>We may update this Privacy Policy periodically. Any changes will be posted with an updated date above.</p>
+                    <p>We encourage you to review it from time to time.</p>
+                </div>
+            </details>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="page" id="be85f790-eec1-4d8b-998d-6f7134d1ef00" style="display: none; padding: 20px; width: 92%; max-width: 1100px; margin: 20px auto; background: rgba(20,15,10,0.85); border: 2px solid #5c4425; border-radius: 12px; position: relative; min-height: 800px;">
+      <div style="position: absolute; left: 26px; top: 24px; width: 1037px; height: 741px; transform: scale(1) rotate(0deg); z-index: 1; border: 3px solid #5c4425; border-radius: 6px; ;; background: #2a1e12; border: 3px solid #5c4425; border-radius: 6px; padding: 18px; color: #ffda7b;"></div>
+      <div style="position: absolute; left: 35px; top: 20px; width: 388px; height: 98px; transform: scale(1) rotate(0deg); z-index: 2; ; ; ;; font-size: 45px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">Contact/Support</div>
+      <a href="mailto:MiningMonksVR@gmail.com?subject=Question&body=Type%20here%20what%20you%20have%20a%20question%20or%20problem%20about%0A%0AIn-game%20name:%20(if%20needed)%20%0APlayFab%20ID:%20(if%20needed)%20" target="_blank" style="position: absolute; left: 764px; top: 709px; width: 275px; height: 44px; transform: scale(1) rotate(0deg); z-index: 3; border: 2px solid #c28f4a; border-radius: 8px; ;; display: flex; align-items: center; justify-content: center; background: linear-gradient(#3d2a18, #2a1e12); color: #ffda7b; border: 2px solid #c28f4a; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 700; text-decoration: none;">Click Here to send a email</a>
+      <div style="position: absolute; left: 35px; top: 80px; width: 449px; height: 70px; transform: scale(1) rotate(0deg); z-index: 5; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">If you encounter any issues while playing Mining Monks VR, we are here to help. Please email us to report: </div>
+      <div style="position: absolute; left: 35px; top: 130px; width: 455px; height: 40px; transform: scale(1) rotate(0deg); z-index: 6; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">1. In-game problems or bugs Suspicious activity</div>
+      <div style="position: absolute; left: 35px; top: 156px; width: 457px; height: 52px; transform: scale(1) rotate(0deg); z-index: 7; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">2. Suspicious activity, such as hackers, cheaters, harassment, or doxxing by other community members</div>
+      <div style="position: absolute; left: 35px; top: 203px; width: 457px; height: 52px; transform: scale(1) rotate(0deg); z-index: 8; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">3. Purchase confirmations, account issues, or any payment-related questions</div>
+      <div style="position: absolute; left: 35px; top: 255px; width: 504px; height: 125px; transform: scale(1) rotate(0deg); z-index: 9; ; ; ;; font-size: 16px; font-weight: normal; font-family: Arial, sans-serif; text-align: left; color: #f0d9a3; background-color: transparent;">For account-related matters, please include your PlayFab ID and username. You can also report issues directly in-game using the report feature.
+Include as much detail as possible, such as descriptions, screenshots, or receipts. Our support team will review your message and respond as quickly as possible.</div>
+    </div>
+  <script>
+    function switchPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => {
+        p.style.display = 'none';
+        p.classList.remove('active');
+      });
+      document.querySelectorAll('.tabBtn').forEach(b => b.classList.remove('active'));
+      document.getElementById(pageId).style.display = 'block';
+      document.getElementById(pageId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
