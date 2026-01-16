@@ -5,143 +5,271 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Monk Games</title>
   <link rel="icon" type="image/x-icon" href="/Images/Favicon.ico">
-  <style>
-    .page {
-        position: relative; 
-        padding: 20px; 
-        width: 92%; 
-        max-width: 1100px; 
-        margin: 20px auto; 
-        background: rgba(20,15,10,0.85); 
-        border: 2px solid #5c4425; 
-        border-radius: 12px; 
-        min-height: 800px;
-    }
+<style>
+  :root {
+    --bg: #1c1e22;
+    --header: #202225;
+    --panel: #26282c;
+    --panel-soft: #2d3035;
+    --border: #3a3d42;
+    --text: #e5e7eb;
+    --text-soft: #b0b4bb;
+    --muted: #8b8f97;
+    --accent: #4b5563;
+    --accent-dark: #374151;
+    --button: #32353a;
+    --button-hover: #3b3f45;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  header {
+    background: var(--header);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+    color: var(--text);
+  }
+
+  #tabBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 12px;
+  }
+
+  .tabBtn {
+    padding: 8px 18px;
+    background: var(--button);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s ease;
+  }
+
+  .tabBtn:hover {
+    background: var(--button-hover);
+  }
+
+  .tabBtn.active {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+  }
+
+  .page {
+    display: none;
+    padding: 20px;
+    width: 92%;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    min-height: 800px;
+    position: relative;
+  }
+
+  .page.active {
+    display: block;
+  }
+
+  .content-wrapper {
+    background: var(--panel-soft);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .privacy-dropdown {
+    background: var(--panel-soft);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .privacy-dropdown summary {
+    padding: 15px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text);
+    position: relative;
+    list-style: none;
+  }
+
+  .privacy-dropdown summary::after {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    color: var(--muted);
+  }
+
+  .privacy-dropdown[open] summary::after {
+    content: '▲';
+  }
+
+  .privacy-content {
+    padding: 15px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text-soft);
+  }
+
+  .privacy-content h3 {
+    margin-top: 10px;
+    color: var(--text);
+    font-size: 1em;
+  }
+
+  .privacy-content ul {
+    margin-left: 20px;
+  }
+
+  .privacy-content a {
+    color: #c7cbd1;
+    text-decoration: underline;
+  }
+
+  a {
+    color: #c7cbd1;
+  }
+
+  a:hover {
+    opacity: 0.85;
+  }
+
+  /* 🔥 FORCE REMOVE BROWN FROM INLINE STYLES */
+  div[style*="background"],
+  a[style*="background"] {
+    background: var(--panel-soft) !important;
+  }
+
+  a[style*="linear-gradient"] {
+    background: var(--button) !important;
+  }
+
+  div[style*="border"],
+  img {
+    border-color: var(--border) !important;
+  }
+
+  a {
+    border-color: var(--border) !important;
+  }
+  /* ===============================
+   FORCE TEXT TO BE TRANSPARENT
+   =============================== */
+
+/* All text-only divs */
+div[style*="font-size"],
+div[style*="font-family"],
+div[style*="color"] {
+  background: transparent !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  background: transparent !important;
+}
+
+/* Paragraphs, lists, spans */
+p, span, li, ul, ol {
+  background: transparent !important;
+}
+
+/* Fix summaries in dropdowns */
+summary {
+  background: transparent !important;
+}
+
+/* Ensure text color stays readable */
+div, p, span, li {
+  color: var(--text);
+}
+
+/* Links inside text */
+a {
+  background: transparent !important;
+}
+/* ===============================
+   BROWN → WHITE TEXT OVERRIDES
+   =============================== */
+
+/* LIGHT BROWN / GOLD TEXT → WHITE */
+*[style*="color: #f0d9a3"],
+*[style*="color:#f0d9a3"],
+*[style*="color: #ffda7b"],
+*[style*="color:#ffda7b"] {
+  color: #ffffff !important;
+}
+
+/* DARKER BROWN / GOLD → SOFT WHITE-GREY */
+*[style*="color: #c28f4a"],
+*[style*="color:#c28f4a"],
+*[style*="color: #b8945e"],
+*[style*="color:#b8945e"] {
+  color: #d1d5db !important;
+}
+
+/* Safety net: text inside dark brown panels */
+div[style*="#2a1e12"] *,
+div[style*="#3d2a18"] * {
+  color: #e5e7eb !important;
+}
+/* ===============================
+   FIXED LAYOUT RESPONSIVE SHELL
+   =============================== */
+
+.page-wrapper {
+  width: 1100px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page {
+  position: relative;
+}
+
+/* Scale entire layout on small screens */
+@media (max-width: 1100px) {
+  .page-wrapper {
+    transform: scale(calc(100vw / 1100));
+    transform-origin: top center;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .page-wrapper {
+    transform: scale(calc(100vw / 1100));
+  }
+}
 
 
-    .content-wrapper {
-        padding: 10px 10px;
-        background: #2a1e12; 
-        border: 3px solid #5c4425; 
-        border-radius: 6px; 
-        margin-bottom: 20px;
-    }
+</style>
 
-    .privacy-dropdown {
-        background: #3d2a18;
-        border: 1px solid var(--accent);
-        border-radius: 6px;
-        margin-bottom: 10px;
-        color: #f0d9a3;
-        overflow: hidden; 
-    }
-    .privacy-dropdown summary {
-        padding: 15px 20px;
-        font-weight: bold;
-        font-size: 1.1em;
-        cursor: pointer;
-        outline: none;
-        list-style: none; 
-        display: block; 
-        position: relative;
-    }
-    .privacy-dropdown summary::after {
-        content: '▼';
-        position: absolute;
-        right: 20px;
-        transition: transform 0.2s;
-    }
-    .privacy-dropdown[open] summary::after {
-        content: '▲';
-    }
-    .privacy-content {
-        padding: 10px 20px 20px 20px;
-        border-top: 1px solid var(--muted);
-        background: #2a1e12; 
-    }
-    .privacy-content h3 {
-        color: var(--gold);
-        margin-top: 10px;
-        margin-bottom: 5px;
-        font-size: 1em;
-    }
-    .privacy-content ul {
-        list-style-type: disc;
-        margin-left: 20px;
-        padding-left: 0;
-    }
-    .privacy-content ul li {
-        margin-bottom: 5px;
-    }
-    .privacy-content p {
-        margin-bottom: 10px;
-    }
-    .privacy-content a {
-        color: var(--gold);
-        text-decoration: underline;
-    }
-    :root {
-      --bg: #4b3621;
-      --header: #2a1e12;
-      --gold: #ffda7b;
-      --accent: #c28f4a;
-      --panel: #1b140d;
-      --muted: #845e2f;
-      --page-bg: rgba(20,15,10,0.85);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { 
-      font-family: Arial, Helvetica, sans-serif; 
-      background: var(--bg); 
-      color: #f0d9a3;
-      min-height: 100vh;
-    }
-    header {
-      background: var(--header);
-      padding: 20px;
-      text-align: center;
-      border-bottom: 4px solid var(--accent);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      color: #e6c37a;
-    }
-    #tabBar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px;
-      background: #1b140d;
-      border-bottom: 3px solid var(--muted);
-      padding: 10px;
-    }
-    .tabBtn {
-      padding: 8px 16px;
-      background: linear-gradient(#3d2a18, #2a1e12);
-      border: 2px solid var(--accent);
-      border-radius: 8px;
-      color: var(--gold);
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.12s;
-    }
-    .tabBtn.active {
-      background: var(--gold);
-      color: #000;
-      border-color: var(--muted);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-    }
-    .tabBtn:hover {
-      transform: translateY(-2px);
-    }
-    .page {
-      display: none;
-    }
-    .page.active {
-      display: block;
-    }
-  </style>
+
 </head>
 <body>
   <header>
